@@ -124,6 +124,6 @@ Feed the `http://127.0.0.1:8000/openapi.json` schema to your LLM (OpenAI/Anthrop
 - [ ] OCR Integration
 
 <div align="center">
-Built with ❤️ and ☕ by [Your Name]
+Built with ❤️ and ☕ by F0nkell
 </div>
 
