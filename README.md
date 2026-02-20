@@ -71,57 +71,59 @@ We don't play around. This project is built with **FAANG-level standards**:
 ```bash
 git clone https://github.com/YOUR_USERNAME/openclaw-api.git
 cd openclaw-api
-2. Set up Virtual Environment
-code
-Bash
+```
+### 2. Set up Virtual Environment
+```bash
 python -m venv venv
 # Windows:
 venv\Scripts\activate
 # Mac/Linux:
 source venv/bin/activate
-3. Install Dependencies
-code
-Bash
+```
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
 playwright install chromium
-4. Configure Environment
+```
+### 4. Configure Environment
 Create a .env file in the root directory:
-code
-Env
+```env
 API_KEY=your_super_secret_key
 HOST=127.0.0.1
 PORT=8000
 WORKSPACE_ROOT=C:/Path/To/Your/Projects
-🎮 Usage
-Start the Server:
-code
-Bash
+```
+## 🎮 Usage
+### 1. Start the Server:
+```bash
 python main.py
-Open Swagger UI:
-Go to http://127.0.0.1:8000/docs.
-Authorize:
-Click the "Authorize" button and enter your API_KEY.
-Connect your AI Agent:
-Feed the http://127.0.0.1:8000/openapi.json schema to your LLM (OpenAI/Anthropic) as a "Tool Definition".
-🔒 Security Architecture
-Network Isolation: Binds strictly to 127.0.0.1. No external access possible.
-Auth: Bearer Token authentication required for ALL endpoints.
-Sandboxing: File operations utilize a resolve_path algorithm that physically prevents escaping the WORKSPACE_ROOT.
-Audit Trail: Every request is logged to openclaw_audit.log with timestamps and status codes.
-🗺️ Roadmap
+```
+### 2. Open Swagger UI:
+Go to `http://127.0.0.1:8000/docs`.
+### 3.Authorize:
+Click the `"Authorize"` button and enter your `API_KEY`.
+### 4.Connect your AI Agent:
+Feed the `http://127.0.0.1:8000/openapi.json` schema to your LLM (OpenAI/Anthropic) as a `"Tool Definition"`.
+## 🔒 Security Architecture
+- Network Isolation: Binds strictly to `127.0.0.1`. No external access possible.
+- Auth: Bearer Token authentication required for ALL endpoints.
+- Sandboxing: File operations utilize a `resolve_path` algorithm that physically prevents escaping the `WORKSPACE_ROOT`.
+- Audit Trail: Every request is logged to `openclaw_audit.log` with timestamps and status codes.
+## 🗺️ Roadmap
 
-Core API (System, Web, Files)
+- [x] Core API (System, Web, Files)
 
-Security Sandboxing
+- [x] Security Sandboxing
 
-Playwright Integration
+- [x] Playwright Integration
 
-Docker Support
+- [ ] Docker Support
 
-WebSocket Stream for Real-time Terminal Output
+- [ ] WebSocket Stream for Real-time Terminal Output
 
-OCR Integration
+- [ ] OCR Integration
+
 <div align="center">
 Built with ❤️ and ☕ by [Your Name]
 </div>
-```
+
